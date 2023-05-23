@@ -19,6 +19,7 @@ if(VCPKG_TARGET_IS_LINUX OR VCPKG_TARGET_IS_OSX)
         OUT_FEATURE_OPTIONS FEATURE_OPTIONS
         FEATURES
             fmt BUILD_WITH_FMT
+            streams BUILD_WITH_STREAMS
     )
 
     vcpkg_cmake_configure(

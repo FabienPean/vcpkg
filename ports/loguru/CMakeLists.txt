@@ -24,6 +24,10 @@ if(BUILD_WITH_FMT)
     target_link_libraries(loguru PUBLIC fmt::fmt)
 endif()
 
+if(BUILD_WITH_STREAMS)
+    target_compile_definitions(loguru PUBLIC LOGURU_WITH_STREAMS=1)
+endif()
+
 if(UNIX)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
     find_package(Threads REQUIRED)
